@@ -1,12 +1,14 @@
 local servers = {
+  "biome",
 	"lua_ls",
-	-- "cssls",
+	"cssls",
 	-- "html",
-	-- "tsserver",
+	"tsserver",
 	"pyright",
-	-- "bashls",
+	"bashls",
 	"jsonls",
 	-- "yamlls",
+  "eslint"  ,
 }
 
 local settings = {
