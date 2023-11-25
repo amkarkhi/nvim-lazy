@@ -97,6 +97,10 @@ return packer.startup(function(use)
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
+
+	-- copilot
+	use({ "github/copilot.vim" })
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
