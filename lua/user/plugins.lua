@@ -99,7 +99,24 @@ return packer.startup(function(use)
 	-- Put this at the end after all plugins
 
 	-- copilot
-	use({ "github/copilot.vim" })
+	-- use({ "zbirenbaum/copilot.lua" })
+	use({
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		event = "InsertEnter",
+		config = function()
+			require("copilot").setup({})
+		end,
+	})
+	use({
+		"zbirenbaum/copilot-cmp",
+		after = { "copilot.lua" },
+		config = function()
+			require("copilot_cmp").setup()
+		end,
+	})
+
+	-- use({ "github/copilot.vim" })
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
