@@ -71,3 +71,31 @@ keymap("x", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 -- auto fold
 
 keymap("n", "<leader>z", "vapkzf", opts)
+
+
+-- prime keymaps
+
+keymap("n", "J", "mzJ`z", opts)
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)
+keymap("n", "n", "nzzzv", opts)
+keymap("n", "N", "Nzzzv", opts)
+
+local dap = require('dap')
+
+keymap('n', '<F5>', dap.continue, opts)
+keymap('n', '<F10>', dap.step_over, opts)
+keymap('n', '<F11>', dap.step_into, opts)
+keymap('n', '<F12>', dap.step_out, opts)
+keymap('n', '<leader>b', dap.toggle_breakpoint, opts)
+
+keymap('n', '<leader>B', function()
+  dap.set_breakpoint(vim.fn.input('Breakpoint condition: '))
+end, opts)
+
+keymap('i', '<leader>]', '<Plug>(copilot-next)', opts)
+keymap('i', '<leader>[', '<Plug>(copilot-previous)', opts)
+
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
