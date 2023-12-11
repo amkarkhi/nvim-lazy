@@ -126,6 +126,9 @@ return packer.startup(function(use)
 	use({ "folke/zen-mode.nvim" })
 	use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
 
+	-- amin
+	use({ "tpope/vim-obsession" })
+
 	-- use({ "github/copilot.vim" })
 
 	if PACKER_BOOTSTRAP then
