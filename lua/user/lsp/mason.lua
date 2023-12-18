@@ -1,5 +1,5 @@
 local servers = {
-  "biome",
+	"biome",
 	"lua_ls",
 	"cssls",
 	-- "html",
@@ -8,7 +8,9 @@ local servers = {
 	"bashls",
 	"jsonls",
 	-- "yamlls",
-  "eslint"  ,
+	"eslint",
+	-- go
+	"gopls",
 }
 
 local settings = {
