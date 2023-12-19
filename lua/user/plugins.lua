@@ -47,7 +47,7 @@ return packer.startup(function(use)
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" })
 	use({ "nvim-tree/nvim-web-devicons" })
 	use({ "nvim-tree/nvim-tree.lua" })
-	use({ "akinsho/bufferline.nvim" })
+	-- use({ "akinsho/bufferline.nvim" })
 	use({ "moll/vim-bbye" })
 	use({ "nvim-lualine/lualine.nvim" })
 	use({ "akinsho/toggleterm.nvim" })
@@ -99,23 +99,6 @@ return packer.startup(function(use)
 
 	-- copilot
 	use({ "github/copilot.vim" })
-	-- use({ "zbirenbaum/copilot.lua" })
-	-- use({
-	-- 	"zbirenbaum/copilot.lua",
-	-- 	cmd = "Copilot",
-	-- 	event = "InsertEnter",
-	-- 	config = function()
-	-- 		require("copilot").setup({})
-	-- 	end,
-	-- })
-
-	-- use({
-	-- 	"zbirenbaum/copilot-cmp",
-	-- 	after = { "copilot.lua" },
-	-- 	config = function()
-	-- 		require("copilot_cmp").setup()
-	-- 	end,
-	-- })
 
 	--debug
 	use("mfussenegger/nvim-dap")
