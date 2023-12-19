@@ -108,17 +108,16 @@ local location = {
 local filePath = {
 	function()
 		if vim.fn.winwidth(0) > 130 then
-			return "$" .. vim.fn.expand("%:.") .. ":"
+			return "$" .. vim.fn.expand("%:.")
 		elseif vim.fn.winwidth(0) > 110 then
-			return "$" .. vim.fn.expand("%:.:h") .. ":"
+			return "$" .. vim.fn.expand("%:.:h")
 		elseif vim.fn.winwidth(0) > 90 then
-			return "$" .. vim.fn.expand("%:.:h:t") .. ":"
+			return "$" .. vim.fn.expand("%:.:h:t")
 		else
 			return ""
 		end
 	end,
 	color = setReverseColorByMode,
-	padding = { left = 0, right = 0 },
 }
 
 -- cool function for progress
