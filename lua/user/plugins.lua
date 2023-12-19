@@ -122,7 +122,7 @@ return packer.startup(function(use)
 	use({ "mxsdev/nvim-dap-vscode-js", requires = { "mfussenegger/nvim-dap" } })
 
 	-- prime
-	use({ "theprimeagen/harpoon" })
+	use({ "theprimeagen/harpoon", branch = "harpoon2" })
 	use({ "mbbill/undotree" })
 	use({ "folke/zen-mode.nvim" })
 	use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
