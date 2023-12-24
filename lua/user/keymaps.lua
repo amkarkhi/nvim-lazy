@@ -105,4 +105,4 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- zenmode
 
-keymap("n", "zz", ":ZenMode<CR>", opts)
+keymap("n", "zZ", ":ZenMode<CR>", opts)
