@@ -127,6 +127,10 @@ local mappings = {
 			"<cmd>Gitsigns diffthis HEAD<cr>",
 			"Diff",
 		},
+		t = {
+			"<cmd>UndotreeToggle<cr>",
+			"undo tree",
+		},
 	},
 
 	l = {
