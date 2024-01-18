@@ -59,7 +59,6 @@ return packer.startup(function(use)
 
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim" })
-	use({ "lunarvim/darkplus.nvim" })
 
 	-- Cmp
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
@@ -112,6 +111,7 @@ return packer.startup(function(use)
 
 	-- amin
 	use({ "tpope/vim-obsession" })
+	use({ "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" } })
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
