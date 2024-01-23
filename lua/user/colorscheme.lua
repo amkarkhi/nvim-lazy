@@ -30,6 +30,10 @@ require("tokyonight").setup({
 	---@param highlights Highlights
 	---@param colors ColorScheme
 	on_highlights = function(highlights, colors)
+		highlights.LspReferenceRead = {
+			bg = "#3b4261",
+			fg = "#d8dee9",
+		}
 		highlights.LspReferenceWrite = {
 			bg = "#3b4261",
 			fg = "#d8dee9",
@@ -43,7 +47,7 @@ require("tokyonight").setup({
 	end,
 })
 
-local colorscheme = "tokyonight"
+local colorscheme = "tokyonight-night"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
