@@ -9,7 +9,7 @@ end
 local util = require("lspconfig/util")
 
 local opts = {
-	ona_attach = on_attach,
+	on_attach = on_attach,
 	capabilities = capabilities,
 	cmd = { "gopls" },
 	filetypes = { "go", "gomod", "gowork", "gotmpl" },

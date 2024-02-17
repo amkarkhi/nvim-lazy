@@ -29,6 +29,9 @@ local settings = {
 	max_concurrent_installers = 4,
 	ensure_installed = {
 		"js-debug-adapter",
+		"mypy",
+		"black",
+		"ruff",
 	},
 }
 

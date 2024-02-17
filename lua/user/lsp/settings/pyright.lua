@@ -1,9 +1,22 @@
+local config = require("user.lsp.handlers")
+local null_ls = require("user.lsp.null-ls")
+local on_attach = config.on_attach
+local capabilities = config.capabilities
+
 return {
-  settings = {
-    python = {
-      analysis = {
-        typeCheckingMode = "off",
-      },
-    },
-  },
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = { "python" },
+	settings = {
+		python = {
+			analysis = {
+				typeCheckingMode = "on",
+			},
+		},
+	},
+	sources = {
+		null_ls.diagnostics.mypy,
+		null_ls.diagnostics.ruff,
+		null_ls.diagnostics.black,
+	},
 }

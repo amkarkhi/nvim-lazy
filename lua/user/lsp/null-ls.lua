@@ -8,6 +8,9 @@ local formatting = null_ls.builtins.formatting
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
 local diagnostics = null_ls.builtins.diagnostics
 
+local M = {}
+M.diagnostics = diagnostics
+
 local group = vim.api.nvim_create_augroup("lsp_format_on_save", { clear = false })
 local event = "BufWritePre" -- or "BufWritePost"
 local async = event == "BufWritePost"
@@ -49,3 +52,5 @@ null_ls.setup({
 		-- diagnostics.flake8
 	},
 })
+
+return M
