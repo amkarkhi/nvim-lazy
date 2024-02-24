@@ -44,7 +44,7 @@ null_ls.setup({
 	sources = {
 		-- formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
 		formatting.prettier.with({ extra_args = { "--jsx-single-quote" } }),
-		formatting.black.with({ extra_args = { "--fast" } }),
+		-- formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
 		formatting.gofumpt,
 		formatting.goimports_reviser,

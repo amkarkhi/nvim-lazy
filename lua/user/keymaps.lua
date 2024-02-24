@@ -103,9 +103,13 @@ end
 keymap("i", "<leader>]", "<Plug>(copilot-next)", opts)
 keymap("i", "<leader>[", "<Plug>(copilot-previous)", opts)
 
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+keymap("n", "<leader>x", "<cmd>!chmod +x %<CR>", term_opts)
+
+-- context
+keymap("n", "[c", function()
+	require("treesitter-context").go_to_context(vim.v.count1)
+end, term_opts)
 
 -- zenmode
-
 keymap("n", "zZ", ":ZenMode<CR>", opts)
