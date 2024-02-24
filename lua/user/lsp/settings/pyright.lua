@@ -17,6 +17,6 @@ return {
 	sources = {
 		null_ls.diagnostics.mypy,
 		null_ls.diagnostics.ruff,
-		null_ls.diagnostics.black,
+		-- null_ls.diagnostics.black,
 	},
 }

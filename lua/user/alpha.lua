@@ -11,6 +11,10 @@ dashboard.section.header.val = {
 	[[/\ \/\ \/\  __//\ \_\ \ \ \_/ |\ \ \/\ \/\ \/\ \ ]],
 	[[\ \_\ \_\ \____\ \____/\ \___/  \ \_\ \_\ \_\ \_\]],
 	[[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
+	[[]],
+	[[ /\_/\  /\_/\  /\_/\  /\_/\  /\_/\  /\_/\  /\_/\ ]],
+	[[( o.o )( o.o )( o.o )( o.o )( o.o )( o.o )( o.o )]],
+	[[ > ^ <  > ^ <  > ^ <  > ^ <  > ^ <  > ^ <  > ^ < ]],
 }
 dashboard.section.buttons.val = {
 	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
@@ -19,9 +23,17 @@ dashboard.section.buttons.val = {
 	dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
 	dashboard.button("t", "󱎸  Find text", ":Telescope live_grep <CR>"),
 	dashboard.button("c", "  Configuration", ":e $MYVIMRC <CR>"),
-	dashboard.button("l", "󰘛  Load Session", ":source Session.vim <CR>"),
+	-- dashboard.button("l", "󰘛  Load Session", ":source Session.vim <CR>"),
 	dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 }
+
+local session_file = "./Session.vim"
+if vim.fn.filereadable(session_file) == 1 then
+	table.insert(
+		dashboard.section.buttons.val,
+		dashboard.button("l", "󰘛  Load Session", ":source " .. session_file .. " <CR>")
+	)
+end
 
 local function footer()
 	-- NOTE: requires the fortune-mod package to work
@@ -29,7 +41,7 @@ local function footer()
 	-- local fortune = handle:read("*a")
 	-- handle:close()
 	-- return fortune
-	return "chrisatmachine.com (Customized by Amin)"
+	return "karkhi.ir (Customized by Amin)"
 end
 
 dashboard.section.footer.val = footer()

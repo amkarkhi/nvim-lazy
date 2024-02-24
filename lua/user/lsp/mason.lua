@@ -30,7 +30,7 @@ local settings = {
 	ensure_installed = {
 		"js-debug-adapter",
 		"mypy",
-		"black",
+		-- "black",
 		"ruff",
 	},
 }
