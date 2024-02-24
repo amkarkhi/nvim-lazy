@@ -103,6 +103,8 @@ return packer.startup(function(use)
 	use({ "mfussenegger/nvim-dap" })
 	use({ "leoluz/nvim-dap-go" })
 	use({ "mxsdev/nvim-dap-vscode-js", requires = { "mfussenegger/nvim-dap" } })
+	use({ "nvim-telescope/telescope-dap.nvim" })
+	use({ "theHamsta/nvim-dap-virtual-text" })
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
 	use({
 		"microsoft/vscode-js-debug",
@@ -119,6 +121,7 @@ return packer.startup(function(use)
 	-- amin
 	use({ "tpope/vim-obsession" })
 	use({ "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" } })
+	use({ "rhysd/vim-grammarous" })
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

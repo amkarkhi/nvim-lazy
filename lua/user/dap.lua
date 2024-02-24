@@ -1,9 +1,15 @@
-local ok, dap = pcall(require, "dap-go")
-if not ok then
-	return
-end
+local dap = require("dap")
 
-dap.setup({
+dap.adapters.delve = {
+	type = "server",
+	port = "4000",
+	executable = {
+		command = "dlv",
+		args = { "dap", "-l", "127.0.0.1:4000" },
+	},
+}
+
+require("dap-go").setup({
 	-- Additional dap configurations can be added.
 	-- dap_configurations accepts a list of tables where each entry
 	-- represents a dap configuration. For more details do:
@@ -30,7 +36,9 @@ dap.setup({
 		-- to start the process in a random available port
 		port = "${port}",
 		-- additional args to pass to dlv
-		args = {},
+		args = {
+			-- "-l=${port}",
+		},
 		-- the build flags that are passed to delve.
 		-- defaults to empty string, but can be used to provide flags
 		-- such as "-tags=unit" to make sure the test suite is
