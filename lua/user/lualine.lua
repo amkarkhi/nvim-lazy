@@ -154,7 +154,8 @@ lualine.setup({
 		lualine_c = {},
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
 		lualine_x = { diff, spaces, "encoding", filetype, "fileformat", "filesize" },
-		lualine_y = { filePath, location },
+		--lualine_y = { filePath, location },
+		lualine_y = { location },
 		lualine_z = { ProgressBar },
 	},
 	inactive_sections = {
