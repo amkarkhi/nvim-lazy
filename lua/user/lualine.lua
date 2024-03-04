@@ -105,20 +105,20 @@ local location = {
 	color = setReverseColorByMode,
 }
 
-local filePath = {
-	function()
-		if vim.fn.winwidth(0) > 130 then
-			return "$" .. vim.fn.expand("%:.")
-		elseif vim.fn.winwidth(0) > 110 then
-			return "$" .. vim.fn.expand("%:.:h")
-		elseif vim.fn.winwidth(0) > 90 then
-			return "$" .. vim.fn.expand("%:.:h:t")
-		else
-			return ""
-		end
-	end,
-	color = setReverseColorByMode,
-}
+-- local filePath = {
+-- 	function()
+-- 		if vim.fn.winwidth(0) > 130 then
+-- 			return "$" .. vim.fn.expand("%:.")
+-- 		elseif vim.fn.winwidth(0) > 110 then
+-- 			return "$" .. vim.fn.expand("%:.:h")
+-- 		elseif vim.fn.winwidth(0) > 90 then
+-- 			return "$" .. vim.fn.expand("%:.:h:t")
+-- 		else
+-- 			return ""
+-- 		end
+-- 	end,
+-- 	color = setReverseColorByMode,
+-- }
 
 -- cool function for progress
 local progress = function()
@@ -164,7 +164,8 @@ lualine.setup({
 		lualine_c = { "filename" },
 		lualine_x = { "location" },
 		lualine_y = {},
-		lualine_z = { filePath },
+		lualine_z = {},
+		-- lualine_z = { filePath },
 	},
 	tabline = {},
 	extensions = {},
