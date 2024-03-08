@@ -90,6 +90,9 @@ local opts = { noremap = true, silent = true }
 local function keyBindings()
 	vim.keymap.set("i", "<leader>]", "<Plug>(copilot-next)", opts)
 	vim.keymap.set("i", "<leader>[", "<Plug>(copilot-previous)", opts)
+	vim.keymap.set("i", "<leader>/", "<Plug>(copilot-suggest)", opts)
+	vim.keymap.set("i", "<leader>q", "<Plug>(copilot-ask)", opts)
+	vim.keymap.set("i", "<M-l>", "<Plug>(copilot-accept-word)", opts)
 	-- open chat
 	vim.keymap.set("n", "<leader>ms", open_or_toggle_chat, opts)
 	-- open chat Float

@@ -1,9 +1,3 @@
--- local copilot_status_ok, _ = pcall(require, "copilot")
---
--- if not copilot_status_ok then
---   return
--- end
---
 -- require('copilot').setup({
 --   panel = {
 --     enabled = true,
