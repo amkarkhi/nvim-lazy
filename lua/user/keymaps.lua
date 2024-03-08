@@ -70,7 +70,7 @@ keymap("x", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 
 -- auto fold
 
-keymap("n", "<leader>z", "vapkzf", opts)
+keymap("n", "<leader>z", "{jvapkzf", opts)
 
 -- prime keymaps
 

@@ -100,6 +100,14 @@ return packer.startup(function(use)
 
 	-- copilot
 	use({ "github/copilot.vim" })
+	use({
+		"CopilotC-Nvim/CopilotChat.nvim",
+		branch = "canary",
+		dependencies = { { "github/copilot.vim" }, { "nvim-lua/plenary.nvim" } }, -- for curl, log wrapper
+		opts = {
+			debug = false,
+		},
+	})
 
 	--debug
 	use({ "mfussenegger/nvim-dap" })
