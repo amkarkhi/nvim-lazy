@@ -45,31 +45,8 @@ local function ask_question()
 	})
 end
 
-local function is_chat_open()
-	local buffers = vim.api.nvim_list_bufs()
-	for _, buf in ipairs(buffers) do
-		local file_name = (vim.fn.fnamemodify(vim.api.nvim_buf_get_name(buf), ":t"))
-		if vim.api.nvim_buf_is_loaded(buf) and file_name == "copilotChat.lua" then
-			return true
-		end
-	end
-	return false
-end
-is_chat_open()
-
 local function open_or_toggle_chat()
-	if is_chat_open() then
-		chat.toggle()
-	else
-		chat.open({
-			window = {
-				title = "Copilot Chat",
-				width = 0.8,
-				border = "rounded",
-				height = 0.8,
-			},
-		})
-	end
+	chat.toggle()
 end
 
 local function chat_in_place()
